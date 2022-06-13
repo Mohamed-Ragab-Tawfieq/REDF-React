@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.btn,
+input {
+    &:focus {
+        box-shadow: none !important;
+    }
+}
+
+.layout {
+    @media (min-width: 768px) {
+        display: grid;
+        grid-template-columns: auto 1fr;
+    }
+}
+
+.breadcrumb-wrap {
+    .title {
+        color: #fff;
+        font-weight: 700;
+
+        @media (min-width: 992px) {
+            margin-bottom: 1rem;
+        }
+    }
+
+    .breadcrumb {
+        margin-bottom: 0;
+
+        .breadcrumb-item {
+            a {
+                color: rgba(#fff, 0.7);
+            }
+
+            & + .breadcrumb-item {
+                &::before {
+                    content: url(images/icons/divide.svg);
+                    float: none;
+                    text-align: start;
+                    padding-inline-end: 10px;
+                }
+            }
+        }
+    }
+}
