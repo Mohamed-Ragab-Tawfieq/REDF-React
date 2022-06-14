@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
 
-import printIcon from '../images/icons/print.svg';
+import printIcon from '../../assets/images/icons/print.svg';
 
 function Header() {
     return (

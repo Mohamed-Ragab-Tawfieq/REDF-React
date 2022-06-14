@@ -1,5 +1,5 @@
 import React from 'react'
-import searchIcon from '../images/icons/Search.svg'
+import searchIcon from '../../assets/images/icons/Search.svg'
 
 function Filters() {
     return (

@@ -1,0 +1,18 @@
+@import "./variables";
+
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+
+@import "./global";
+@import "./cards";
+@import "../../Components/Header/Header";
+@import "../../Components/SideMenu/SideMenu";
+@import "../../Components/Filters/Filters";
+
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700&display=swap");
+
+body {
+    font-family: "Cairo", sans-seif;
+    text-align: start;
+}
+
+@import "./rtl-overrides";

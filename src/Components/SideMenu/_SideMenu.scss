@@ -1,6 +1,6 @@
 .side-menu {
     background: linear-gradient(180deg, #078583 0%, #1aa9a4 100%);
-    height: 100vh;
+    min-height: 100vh;
 
     @media (max-width: 767px) {
         bottom: 0;
@@ -65,7 +65,7 @@
         padding-block: 2.7rem;
 
         @media (min-width: 768px) and (max-width: 991px) {
-            padding-block: 2.5rem;
+            padding-block: 2.25rem;
         }
 
         .brand {
@@ -92,6 +92,7 @@
     }
 
     .menu-wrap {
+        position: relative;
         display: flex;
 
         .menu {
@@ -146,7 +147,9 @@
                         transform: translateY(50%);
                         z-index: -1;
 
-                        background-color: #000;
+                        background-color: rgba(#000, 0.5);
+                        backdrop-filter: blur(21px);
+
                         color: #fff;
 
                         visibility: hidden;
@@ -154,7 +157,7 @@
                         transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
                         padding: 5px 7px;
-                        border-radius: 2px;
+                        border-radius: 4px;
 
                         &::before {
                             content: "";
@@ -167,9 +170,48 @@
                             height: 0;
 
                             border-block: 5px solid transparent;
-                            border-inline-end: 5px solid #000;
+                            border-inline-end: 5px solid rgba(#000, 0.5);
                         }
                     }
+                }
+            }
+        }
+
+        .toggle {
+            position: absolute;
+            top: -22px;
+            inset-inline-end: 12px;
+            z-index: 15;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 2.75rem;
+            height: 2.75rem;
+
+            background-color: $orange;
+            border-radius: 50%;
+            border: 3px solid #fff;
+
+            @media (max-width: 767px) {
+                position: fixed;
+                top: auto !important;
+                bottom: 0;
+                inset-inline-start: 50% !important;
+                transform: translateX(50%);
+
+                width: 100%;
+                border-radius: 0;
+                border: none;
+            }
+
+            img {
+                transform: scale(1) !important;
+                transition: all 0.3s ease-in-out;
+
+                @media (max-width: 767px) {
+                    width: 1.5rem;
                 }
             }
         }
@@ -187,61 +229,29 @@
             border: 1px solid rgba(36, 36, 36, 0.1);
             border-start-start-radius: 10px;
 
+            opacity: 1;
+            transition: opacity 0.3s ease-in-out;
+
             @media (min-width: 768px) and (max-width: 991px) {
                 height: calc(100vh - 125px);
             }
 
             &::after {
-                content: url(../images/waves.svg);
+                content: "";
                 position: absolute;
                 bottom: 0;
                 inset-inline-end: 0;
 
+                height: 200px;
                 width: 100%;
-                overflow: hidden;
+
+                background-image: url(../../assets/images/waves.svg);
+                background-size: cover;
             }
 
             .title {
                 color: rgba(#444, 0.5);
                 margin: 0.9rem 1.4rem;
-            }
-
-            .toggle {
-                position: absolute;
-                top: -22px;
-                inset-inline-end: 12px;
-
-                display: flex;
-                justify-content: center;
-                align-items: center;
-
-                width: 2.75rem;
-                height: 2.75rem;
-
-                background-color: $orange;
-                border-radius: 50%;
-                border: 3px solid #fff;
-
-                @media (max-width: 767px) {
-                    top: auto !important;
-                    bottom: 0;
-                    inset-inline-start: 50% !important;
-                    transform: translateX(50%);
-                    z-index: 10;
-
-                    width: 100%;
-                    border-radius: 0;
-                    border: none;
-                }
-
-                img {
-                    transform: scale(1) !important;
-                    transition: all 0.3s ease-in-out;
-
-                    @media (max-width: 767px) {
-                        width: 1.5rem;
-                    }
-                }
             }
 
             .list {
@@ -257,7 +267,7 @@
                     border-radius: 0.5rem;
 
                     &::before {
-                        content: url(../images/icons/bookmark.svg);
+                        content: url(../../assets/images/icons/bookmark.svg);
                         position: absolute;
                         inset-inline-start: 6px;
                         bottom: 50%;
@@ -273,7 +283,7 @@
                         color: #129c9a;
 
                         &::before {
-                            content: url(../images/icons/bookmark-muted.svg);
+                            content: url(../../assets/images/icons/bookmark-muted.svg);
                         }
                     }
                 }
@@ -296,12 +306,6 @@
             position: fixed;
             bottom: -100%;
             transition: all 0.3s ease-in-out;
-
-            .sub-menu {
-                .toggle {
-                    position: fixed !important;
-                }
-            }
         }
 
         @media (min-width: 768px) {
@@ -322,26 +326,29 @@
             }
 
             .menu-wrap {
+                .toggle {
+                    display: flex !important;
+
+                    top: -22px;
+                    inset-inline-start: 4.2rem;
+                    inset-inline-end: auto;
+
+                    opacity: 1 !important;
+
+                    img {
+                        transform: scale(-1) !important;
+                        transition: all 0.3s ease-in-out;
+                    }
+                }
+
                 .sub-menu {
                     width: 0;
+                    opacity: 0;
                     border: none;
+                    transition: opacity 0.3s ease-in-out;
 
                     & > * {
                         display: none !important;
-                    }
-
-                    .toggle {
-                        display: flex !important;
-
-                        position: fixed !important;
-                        top: 6.7rem;
-                        inset-inline-start: 4.2rem;
-                        inset-inline-end: auto;
-
-                        img {
-                            transform: scale(-1) !important;
-                            transition: all 0.3s ease-in-out;
-                        }
                     }
                 }
             }

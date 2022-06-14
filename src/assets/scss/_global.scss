@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+    background: #f9fbfc;
+}
+
+a {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.btn,
+input {
+    &:focus {
+        box-shadow: none !important;
+    }
+}
+
+.form-select {
+    background-position: 95% 50%;
+    border-radius: 0.5rem;
+    padding-inline-start: 0.75rem;
+}
+
+.layout {
+    @media (min-width: 768px) {
+        display: grid;
+        grid-template-columns: auto 1fr;
+    }
+
+    .content {
+        padding-inline: 3rem;
+        padding-top: 1.75rem;
+
+        @media (max-width: 767px) {
+            padding-inline: 1rem;
+        }
+    }
+}
+
+.breadcrumb-wrap {
+    .title {
+        color: #fff;
+        font-weight: 700;
+
+        @media (min-width: 992px) {
+            margin-bottom: 1rem;
+        }
+    }
+
+    .breadcrumb {
+        margin-bottom: 0;
+
+        .breadcrumb-item {
+            a {
+                color: rgba(#fff, 0.7);
+            }
+
+            & + .breadcrumb-item {
+                &::before {
+                    content: url(../images/icons/divide.svg);
+                    float: none;
+                    text-align: start;
+                    padding-inline-end: 10px;
+                }
+            }
+        }
+    }
+}
+
+// pagination
+.pagination {
+    justify-content: center;
+    padding-block: 2rem;
+
+    .page-item {
+        & + .page-item {
+            margin-inline-start: 0.9rem;
+        }
+
+        &:first-of-type,
+        &:last-of-type {
+            .page-link {
+                font-size: 2rem;
+                margin-top: -1rem;
+                background-color: transparent;
+                border: none;
+
+                &:hover {
+                    background-color: transparent;
+                    color: #000;
+                }
+            }
+        }
+
+        .page-link {
+            background-color: #f2f3f6;
+            color: #4a4a4a;
+            border-radius: 4px;
+
+            &:hover {
+                background-color: darken(#f2f3f6, 5%);
+            }
+
+            &.active {
+                background-color: #0b9490;
+                color: #fff;
+
+                &:hover {
+                    background-color: darken(#0b9490, 5%);
+                }
+            }
+        }
+    }
+}
