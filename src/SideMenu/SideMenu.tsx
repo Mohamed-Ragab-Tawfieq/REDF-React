@@ -31,14 +31,54 @@ function SideMenu() {
 
             <div className="menu-wrap">
                 <ul className='menu'>
-                    <li className='active'><NavLink to="/"><img src={HomeIcon} alt="" /></NavLink></li>
-                    <li><NavLink to="/"><img src={bookmarkIcon} alt="" /></NavLink></li>
-                    <li><NavLink to="/"><img src={message} alt="" /></NavLink></li>
-                    <li><NavLink to="/"><img src={settings} alt="" /></NavLink></li>
-                    <li><NavLink to="/"><img src={notification} alt="" /></NavLink></li>
-                    <li><NavLink to="/"><img src={stats} alt="" /></NavLink></li>
-                    <li><NavLink to="/"><img src={user} alt="" /></NavLink></li>
-                    <li className='profile'><NavLink to="/"><img src={profile} alt="" /></NavLink></li>
+                    <li className='active'>
+                        <NavLink to="/">
+                            <img src={HomeIcon} alt="" />
+                            <span className='tooltip-text'>HomeIcon</span>
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/">
+                            <img src={bookmarkIcon} alt="" />
+                            <span className='tooltip-text'>bookmarkIcon</span>
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/">
+                            <img src={message} alt="" />
+                            <span className='tooltip-text'>message</span>
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/">
+                            <img src={settings} alt="" />
+                            <span className='tooltip-text'>settings</span>
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/">
+                            <img src={notification} alt="" />
+                            <span className='tooltip-text'>notification</span>
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/">
+                            <img src={stats} alt="" />
+                            <span className='tooltip-text'>stats</span>
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/">
+                            <img src={user} alt="" />
+                            <span className='tooltip-text'>user</span>
+                        </NavLink>
+                    </li>
+                    <li className='profile'>
+                        <NavLink to="/">
+                            <img src={profile} alt="" />
+                            <span className='tooltip-text'>profile</span>
+                        </NavLink>
+                    </li>
                 </ul>
 
                 <div className='sub-menu'>

@@ -10885,6 +10885,7 @@ header .actions .print-btn img {
 }
 
 .side-menu .menu-wrap .menu li {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10904,6 +10905,40 @@ header .actions .print-btn img {
 
 .side-menu .menu-wrap .menu li.profile {
   margin-block: auto 2rem;
+}
+
+.side-menu .menu-wrap .menu li a:hover .tooltip-text {
+  inset-inline-start: 100%;
+  visibility: visible;
+  opacity: 1;
+  z-index: 5;
+}
+
+.side-menu .menu-wrap .menu li a .tooltip-text {
+  position: absolute;
+  inset-inline-start: 0;
+  bottom: 50%;
+  transform: translateY(50%);
+  z-index: -1;
+  background-color: #000;
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  padding: 5px 7px;
+  border-radius: 2px;
+}
+
+.side-menu .menu-wrap .menu li a .tooltip-text::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: -5px;
+  bottom: 50%;
+  transform: translateY(50%);
+  width: 0;
+  height: 0;
+  border-block: 5px solid transparent;
+  border-inline-end: 5px solid #000;
 }
 
 .side-menu .menu-wrap .sub-menu {
