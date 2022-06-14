@@ -2009,7 +2009,7 @@ progress {
   background-clip: padding-box;
   border: 1px solid #ced4da;
   appearance: none;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
@@ -2054,7 +2054,7 @@ progress {
   margin: -0.375rem -0.75rem;
   margin-inline-end: 0.75rem;
   color: #444;
-  background-color: #e9ecef;
+  background-color: #fff;
   pointer-events: none;
   border-color: inherit;
   border-style: solid;
@@ -2071,7 +2071,7 @@ progress {
 }
 
 .form-control:hover:not(:disabled):not([readonly])::file-selector-button {
-  background-color: #dde0e3;
+  background-color: #f2f2f2;
 }
 
 .form-control::-webkit-file-upload-button {
@@ -2079,7 +2079,7 @@ progress {
   margin: -0.375rem -0.75rem;
   margin-inline-end: 0.75rem;
   color: #444;
-  background-color: #e9ecef;
+  background-color: #fff;
   pointer-events: none;
   border-color: inherit;
   border-style: solid;
@@ -2096,7 +2096,7 @@ progress {
 }
 
 .form-control:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
-  background-color: #dde0e3;
+  background-color: #f2f2f2;
 }
 
 .form-control-plaintext {
@@ -2178,12 +2178,12 @@ textarea.form-control-lg {
 
 .form-control-color::-moz-color-swatch {
   height: 1.5em;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
 }
 
 .form-control-color::-webkit-color-swatch {
   height: 1.5em;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
 }
 
 .form-select {
@@ -2201,7 +2201,7 @@ textarea.form-control-lg {
   background-position: right 0.75rem center;
   background-size: 16px 12px;
   border: 1px solid #ced4da;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   appearance: none;
 }
@@ -2566,9 +2566,9 @@ textarea.form-control-lg {
   color: #444;
   text-align: center;
   white-space: nowrap;
-  background-color: #e9ecef;
+  background-color: #fff;
   border: 1px solid #ced4da;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
 }
 
 .input-group-lg > .form-control,
@@ -11097,6 +11097,81 @@ header .actions .print-btn img {
     transform: scale(-1) !important;
     transition: all 0.3s ease-in-out;
   }
+}
+
+.filters {
+  display: grid;
+  grid-template-columns: 1fr 10% 10% auto;
+  gap: 14px;
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 1.5rem;
+  background: #f9fbfc;
+  border: 1px solid rgba(169, 169, 169, 0.25);
+  border-radius: 12px;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .filters {
+    grid-template-columns: 25% 25% 1fr;
+    grid-template-rows: auto auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .filters {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .filters .filter {
+    display: flex;
+    align-items: center;
+  }
+  .filters .filter.search {
+    display: flex;
+    flex-direction: column;
+    grid-area: 1/1/2/4;
+  }
+}
+
+.filters .filter label {
+  color: rgba(68, 68, 68, 0.5);
+  margin-bottom: 0.5rem;
+  margin-inline-end: 0.5rem;
+}
+
+.filters .filter .input-group {
+  display: flex;
+}
+
+.filters .filter .input-group .form-control {
+  order: 2;
+  border-inline-start: none !important;
+  border-start-start-radius: 0 !important;
+  border-end-start-radius: 0 !important;
+  border-start-end-radius: 0.5rem !important;
+  border-end-end-radius: 0.5rem !important;
+}
+
+.filters .filter .input-group .form-control:focus + .input-group-text {
+  border: 1px solid #86b7fe;
+}
+
+.filters .filter .input-group .input-group-text {
+  order: 1;
+  border-inline-end: none !important;
+  border-start-start-radius: 0.5rem !important;
+  border-end-start-radius: 0.5rem !important;
+  border-start-end-radius: 0 !important;
+  border-end-end-radius: 0 !important;
+}
+
+.filters .filter select {
+  border-radius: 0.5rem;
+  background-image: url(../images/icons/chevron-down.svg);
+  background-position: 15% 50%;
+  padding-inline-start: 0.75rem;
 }
 
 body {

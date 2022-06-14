@@ -1,0 +1,79 @@
+.filters {
+    display: grid;
+    grid-template-columns: 1fr 10% 10% auto;
+    gap: 14px;
+
+    padding: 1.2rem 1.5rem;
+    margin-bottom: 1.5rem;
+
+    background: #f9fbfc;
+
+    border: 1px solid rgba(169, 169, 169, 0.25);
+    border-radius: 12px;
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        grid-template-columns: 25% 25% 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    @media (max-width: 767px) {
+        grid-template-columns: 1fr;
+    }
+
+    .filter {
+        @media (min-width: 768px) and (max-width: 991px) {
+            display: flex;
+            align-items: center;
+
+            &.search {
+                display: flex;
+                flex-direction: column;
+                grid-area: 1/1/2/4;
+            }
+        }
+
+        label {
+            color: rgba(#444, 0.5);
+            margin-bottom: 0.5rem;
+            margin-inline-end: 0.5rem;
+        }
+
+        .input-group {
+            display: flex;
+
+            .form-control {
+                order: 2;
+
+                border-inline-start: none !important;
+                border-start-start-radius: 0 !important;
+                border-end-start-radius: 0 !important;
+                border-start-end-radius: 0.5rem !important;
+                border-end-end-radius: 0.5rem !important;
+
+                &:focus {
+                    & + .input-group-text {
+                        border: 1px solid #86b7fe;
+                    }
+                }
+            }
+
+            .input-group-text {
+                order: 1;
+
+                border-inline-end: none !important;
+                border-start-start-radius: 0.5rem !important;
+                border-end-start-radius: 0.5rem !important;
+                border-start-end-radius: 0 !important;
+                border-end-end-radius: 0 !important;
+            }
+        }
+
+        select {
+            border-radius: 0.5rem;
+            background-image: url(../images/icons/chevron-down.svg);
+            background-position: 15% 50%;
+
+            padding-inline-start: 0.75rem;
+        }
+    }
+}
