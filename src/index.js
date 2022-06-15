@@ -7,6 +7,8 @@ import Header from './Components/Header/Header.tsx';
 import SideMenu from './Components/SideMenu/SideMenu.tsx';
 
 import './assets/scss/index.css';
+import 'bootstrap/dist/js/bootstrap.min.js';
+
 
 const root = ReactDOM.createRoot(
   document.getElementById("root")

@@ -217,7 +217,9 @@ input {
     margin-top: 2.5rem;
     margin-inline-start: auto;
 
-    width: 25%;
+    @media (min-width: 992px) {
+        width: 25%;
+    }
 
     @media (max-width: 767px) {
         grid-template-columns: 1fr;
@@ -225,6 +227,7 @@ input {
 
     .btn {
         padding-block: 1rem;
+        border: none;
         border-radius: 0.5rem;
 
         &.save {
