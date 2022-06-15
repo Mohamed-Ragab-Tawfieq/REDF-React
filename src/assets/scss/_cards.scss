@@ -13,12 +13,30 @@
             justify-content: center;
         }
 
+        h5 {
+            margin-inline-end: 1.5rem;
+        }
+
+        .number {
+            margin-inline: 6px;
+            color: #d3b27b;
+        }
+
         .form-select {
             background-image: url(../images/icons/arrow-down.svg);
             background-size: auto;
 
             color: #949ab7;
             border: none;
+        }
+
+        .btn {
+            color: #2aa6a4;
+            background: rgba(42, 166, 164, 0.1);
+            border: 1px solid rgba(42, 166, 164, 0.3);
+
+            padding-inline: 2rem;
+            margin-inline-start: 1.5rem;
         }
     }
 
@@ -54,7 +72,7 @@
                             padding-inline-start: 2rem;
                         }
 
-                        &:last-of-type {
+                        &.light {
                             color: rgba(#444, 0.5);
                         }
                     }
