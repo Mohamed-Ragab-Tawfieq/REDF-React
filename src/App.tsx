@@ -1,8 +1,8 @@
 import './assets/scss/App.scss';
 
-import Header from './Components/Header/Header.tsx';
-import SideMenu from './Components/SideMenu/SideMenu.tsx';
-import Content from './Components/Content/Content.tsx';
+import Header from './theme/Components/Header/Header.tsx';
+import SideMenu from './theme/Components/SideMenu/SideMenu.tsx';
+import Content from './theme/Components/Content/Content.tsx';
 
 function App() {
   return (

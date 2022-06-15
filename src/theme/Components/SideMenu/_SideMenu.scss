@@ -178,6 +178,54 @@
                         }
                     }
                 }
+
+                .sub-list {
+                    position: fixed;
+                    width: 195px;
+                    inset-inline-start: 5rem;
+                    margin-top: 2.5rem;
+                    z-index: 15;
+
+                    .title {
+                        color: rgba(#444, 0.5);
+                        margin: 0.9rem 1.4rem;
+                    }
+
+                    .item {
+                        position: relative;
+
+                        padding: 1rem;
+                        padding-inline-start: 2rem;
+
+                        width: 100%;
+                        border-radius: 0.5rem;
+
+                        &::before {
+                            content: url(../../../assets/images/icons/bookmark.svg);
+                            position: absolute;
+                            inset-inline-start: 6px;
+                            bottom: 50%;
+                            transform: translateY(50%);
+                        }
+
+                        a {
+                            color: #444;
+                        }
+
+                        & + .item {
+                            margin-top: 0.5rem;
+                        }
+
+                        &.active {
+                            background-color: rgba(#dbf0f0, 0.5);
+                            color: #129c9a;
+
+                            &::before {
+                                content: url(../../../assets/images/icons/bookmark-muted.svg);
+                            }
+                        }
+                    }
+                }
             }
         }
 
@@ -253,48 +301,8 @@
                 height: 200px;
                 width: 100%;
 
-                background-image: url(../../assets/images/waves.svg);
+                background-image: url(../../../assets/images/waves.svg);
                 background-size: cover;
-            }
-
-            .title {
-                color: rgba(#444, 0.5);
-                margin: 0.9rem 1.4rem;
-            }
-
-            .list {
-                padding-inline: 1.3rem;
-                height: calc(100vh - 215px);
-                display: flex;
-                flex-direction: column;
-
-                .item {
-                    position: relative;
-                    padding: 1rem;
-                    padding-inline-start: 2rem;
-                    border-radius: 0.5rem;
-
-                    &::before {
-                        content: url(../../assets/images/icons/bookmark.svg);
-                        position: absolute;
-                        inset-inline-start: 6px;
-                        bottom: 50%;
-                        transform: translateY(50%);
-                    }
-
-                    & + .item {
-                        margin-top: 0.5rem;
-                    }
-
-                    &.active {
-                        background-color: rgba(#dbf0f0, 0.5);
-                        color: #129c9a;
-
-                        &::before {
-                            content: url(../../assets/images/icons/bookmark-muted.svg);
-                        }
-                    }
-                }
             }
 
             .username {
@@ -350,7 +358,8 @@
                     }
                 }
 
-                .sub-menu {
+                .sub-menu,
+                .sub-list {
                     width: 0;
                     opacity: 0;
                     border: none;

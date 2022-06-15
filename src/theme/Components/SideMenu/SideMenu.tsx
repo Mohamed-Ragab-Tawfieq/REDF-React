@@ -1,16 +1,16 @@
 import React, { useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
-import logo from '../../assets/images/logo.svg';
-import HomeIcon from '../../assets/images/icons/home.svg';
-import bookmarkIcon from '../../assets/images/icons/bookmark.svg';
-import message from '../../assets/images/icons/message.svg';
-import settings from '../../assets/images/icons/settings.svg';
-import notification from '../../assets/images/icons/notification.svg';
-import stats from '../../assets/images/icons/stats.svg';
-import user from '../../assets/images/icons/profile.svg';
-import profile from '../../assets/images/profile.png';
-import chevronLeft from '../../assets/images/icons/chevron-left.svg';
+import logo from '../../../assets/images/logo.svg';
+import HomeIcon from '../../../assets/images/icons/home.svg';
+import bookmarkIcon from '../../../assets/images/icons/bookmark.svg';
+import message from '../../../assets/images/icons/message.svg';
+import settings from '../../../assets/images/icons/settings.svg';
+import notification from '../../../assets/images/icons/notification.svg';
+import stats from '../../../assets/images/icons/stats.svg';
+import user from '../../../assets/images/icons/profile.svg';
+import profile from '../../../assets/images/profile.png';
+import chevronLeft from '../../../assets/images/icons/chevron-left.svg';
 
 function SideMenu() {
     const [toggled, setToggleMenu] = useState(true);
@@ -42,6 +42,13 @@ function SideMenu() {
                             <img src={HomeIcon} alt="" />
                             <span className='tooltip-text'>HomeIcon</span>
                         </NavLink>
+
+
+                        <ul className="sub-list">
+                            <li> <h6 className='title'>المواعيد</h6> </li>
+                            <li className='item'><Link to="/">طلبات الفروع لإلغاء المواعيد</Link></li>
+                            <li className='item active'><Link to="/">طلبات حجز مواعيد بالفروع</Link></li>
+                        </ul>
                     </li>
                     <li>
                         <NavLink to="/">
@@ -88,13 +95,6 @@ function SideMenu() {
                 </ul>
 
                 <div className='sub-menu'>
-                    <h6 className='title'>المواعيد</h6>
-
-                    <ul className="list">
-                        <li className='item'>طلبات الفروع لإلغاء المواعيد</li>
-                        <li className='item active'>طلبات حجز مواعيد بالفروع</li>
-                    </ul>
-
                     <div className="username">
                         <label>أحمد سمير</label>
                         <small>ahmedsamer062@gmail.com</small>
