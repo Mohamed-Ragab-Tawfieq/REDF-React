@@ -3,9 +3,11 @@
 @import "../../../node_modules/bootstrap/scss/bootstrap.scss";
 
 @import "./global";
+@import "./helpers";
 @import "./cards";
+@import "./modals";
 @import "../../theme/Components/Header/Header";
-@import "../../theme/Components/SideMenu/SideMenu";
+@import "../../theme/Components/SiderMenu/SiderMenu";
 @import "../../theme/Components/Filters/Filters";
 
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700&display=swap");

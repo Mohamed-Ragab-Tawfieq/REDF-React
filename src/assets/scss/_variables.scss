@@ -4,6 +4,11 @@ $headings-margin-bottom: 0;
 // colors
 $body-color: #444;
 $orange: #d3b27b;
+$primary: #26b4b0;
+
+$theme-colors: (
+    "primary": $primary,
+);
 
 // breadcrumbs
 $breadcrumb-active-color: #fff;
@@ -22,3 +27,6 @@ $card-cap-padding-y: 1rem;
 $card-cap-padding-x: 2rem;
 $card-spacer-x: 2rem;
 $card-spacer-y: 1.5rem;
+
+// modals
+$modal-content-border-radius: 10px;

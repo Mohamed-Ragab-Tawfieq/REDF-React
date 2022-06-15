@@ -12,7 +12,7 @@ import user from '../../../assets/images/icons/profile.svg';
 import profile from '../../../assets/images/profile.png';
 import chevronLeft from '../../../assets/images/icons/chevron-left.svg';
 
-function SideMenu() {
+function SiderMenu() {
     const [toggled, setToggleMenu] = useState(true);
 
     const toggleMenu = () => {
@@ -105,4 +105,4 @@ function SideMenu() {
     )
 }
 
-export default SideMenu
+export default SiderMenu
