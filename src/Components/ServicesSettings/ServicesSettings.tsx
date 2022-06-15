@@ -12,7 +12,7 @@ function ServicesSettings() {
                 </select>
             </div>
 
-            <div className="card-body">
+            <div className="card-body p-0">
                 <table className="table table-borderless table-responsive">
                     <thead>
                         <tr>
