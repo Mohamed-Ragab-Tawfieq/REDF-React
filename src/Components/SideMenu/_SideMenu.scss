@@ -105,6 +105,10 @@
             height: calc(100vh - 131px);
             width: 5.5rem;
 
+            @media (max-width: 767px) {
+                height: calc(100vh - 175px);
+            }
+
             li {
                 position: relative;
 
@@ -236,6 +240,10 @@
                 height: calc(100vh - 125px);
             }
 
+            @media (max-width: 767px) {
+                height: calc(100vh - 175px);
+            }
+
             &::after {
                 content: "";
                 position: absolute;
@@ -305,6 +313,7 @@
         @media (max-width: 767px) {
             position: fixed;
             bottom: -100%;
+            z-index: 15;
             transition: all 0.3s ease-in-out;
         }
 

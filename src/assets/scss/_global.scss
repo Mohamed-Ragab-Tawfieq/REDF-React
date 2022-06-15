@@ -91,6 +91,10 @@ input {
     justify-content: center;
     padding-block: 2rem;
 
+    @media (max-width: 767px) {
+        padding-block: 2rem 3rem;
+    }
+
     .page-item {
         & + .page-item {
             margin-inline-start: 0.9rem;
