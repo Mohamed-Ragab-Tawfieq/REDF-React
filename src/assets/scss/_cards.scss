@@ -37,6 +37,10 @@
 
             padding-inline: 2rem;
             margin-inline-start: 1.5rem;
+
+            &:hover {
+                background: rgba(42, 166, 164, 0.2);
+            }
         }
     }
 

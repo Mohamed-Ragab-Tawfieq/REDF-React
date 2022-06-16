@@ -37,12 +37,12 @@ function ReserveSettings() {
             </div>
 
             <div className="action-btns">
-                <button type='button' className='btn save' data-bs-toggle="modal" data-bs-target="#saveModal">حفظ التعديلات</button>
+                <button type='button' className='btn btn-grad' data-bs-toggle="modal" data-bs-target="#saveModal">حفظ التعديلات</button>
                 <button type='button' className='btn back'>رجوع</button>
             </div>
 
             <div className="modal fade" id="saveModal" tabIndex={-1} aria-labelledby="saveModalLabel" aria-hidden="true">
-                <div className="modal-dialog modal-dialog-centered ">
+                <div className="modal-dialog modal-sm modal-dialog-centered ">
                     <div className="modal-content">
                         <div className="modal-header">
                             <button type="button" className="close" data-bs-dismiss="modal" aria-label="Close">X</button>
