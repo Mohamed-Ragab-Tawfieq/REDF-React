@@ -5,6 +5,7 @@ import ServicesSettings from '../ServicesSettings/ServicesSettings.tsx'
 import Pagination from '../Pagination/Pagination.tsx'
 import ReserveSettings from '../ReserveSettings/ReserveSettings.tsx'
 import BranchesSettings from '../BranchesSettings/BranchesSettings.tsx'
+import BranchDetails from '../BranchDetails/BranchDetails.tsx'
 
 function Content() {
     return (
@@ -16,6 +17,8 @@ function Content() {
             <ReserveSettings />
             <br />
             <ServicesSettings />
+            <br />
+            <BranchDetails />
             <br />
             <Pagination />
         </div>

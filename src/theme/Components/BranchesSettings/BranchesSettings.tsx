@@ -19,17 +19,17 @@ function BranchesSettings() {
                     </div>
 
                     <div className='row'>
-                        <select className="form-select col">
+                        <select className="form-select col-auto col-lg">
                             <option selected>فلترة بالأحدث</option>
                             <option selected>فلترة بالأقدم</option>
                         </select>
 
-                        <button className='btn col'>إعدادات عامة</button>
+                        <button className='btn col-auto col-lg'>إعدادات عامة</button>
                     </div>
                 </div>
 
-                <div className="card-body p-0">
-                    <table className="table table-borderless table-responsive">
+                <div className="card-body table-responsive p-0">
+                    <table className="table table-borderless">
                         <thead>
                             <tr>
                                 <th scope="col">الحالة</th>

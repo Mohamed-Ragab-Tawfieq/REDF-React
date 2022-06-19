@@ -8,9 +8,11 @@
 
         border-bottom: none;
 
-        @media (max-width: 767px) {
+        @media (max-width: 991px) {
             grid-template-columns: auto;
             justify-content: center;
+
+            padding-inline: 0.5rem;
         }
 
         h5 {
@@ -28,6 +30,10 @@
 
             color: #949ab7;
             border: none;
+
+            @media (max-width: 991px) {
+                max-width: fit-content;
+            }
         }
 
         .btn {
@@ -37,6 +43,12 @@
 
             padding-inline: 2rem;
             margin-inline-start: 1.5rem;
+
+            @media (max-width: 991px) {
+                padding-inline: 0.5rem;
+                margin-inline-start: 0.5rem;
+                margin-top: 0.5rem;
+            }
 
             &:hover {
                 background: rgba(42, 166, 164, 0.2);

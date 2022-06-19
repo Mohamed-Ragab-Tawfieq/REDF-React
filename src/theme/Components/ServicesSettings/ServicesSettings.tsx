@@ -12,8 +12,8 @@ function ServicesSettings() {
                 </select>
             </div>
 
-            <div className="card-body p-0">
-                <table className="table table-borderless table-responsive">
+            <div className="card-body table-responsive p-0">
+                <table className="table table-borderless">
                     <thead>
                         <tr>
                             <th scope="col">الحالة</th>
