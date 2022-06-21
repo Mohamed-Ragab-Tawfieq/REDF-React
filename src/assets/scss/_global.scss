@@ -57,13 +57,22 @@ input {
         grid-template-columns: auto 1fr;
     }
 
-    .content {
-        padding-inline: 3rem;
-        padding-block: 1.75rem;
+    main {
+        @media (min-width: 768px) {
+            margin-inline-start: 5.5rem;
+        }
 
-        @media (max-width: 767px) {
-            padding-inline: 1rem;
-            padding-bottom: 6rem;
+        .content {
+            padding-inline: 3rem;
+            padding-block: 1.75rem;
+
+            @media (max-width: 991px) {
+                padding-inline: 1rem;
+            }
+
+            @media (max-width: 767px) {
+                padding-bottom: 6rem;
+            }
         }
     }
 }

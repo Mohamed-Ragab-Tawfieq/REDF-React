@@ -92,7 +92,7 @@ function SiderMenu() {
 
                     <ul className="list">
                         <li className='item'><NavLink to="/">طلبات الفروع لإلغاء المواعيد</NavLink></li>
-                        <li className='item active'><NavLink to="/">طلبات حجز مواعيد بالفروع</NavLink></li>
+                        <li className='item'><NavLink to="/">طلبات حجز مواعيد بالفروع</NavLink></li>
                     </ul>
 
                     <div className="username">

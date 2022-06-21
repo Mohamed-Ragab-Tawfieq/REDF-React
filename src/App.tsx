@@ -8,10 +8,10 @@ function App() {
   return (
     <div className='layout'>
       <SiderMenu />
-      <div>
+      <main>
         <Header />
         <Content />
-      </div>
+      </main>
     </div>
   );
 }
