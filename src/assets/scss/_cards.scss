@@ -57,6 +57,10 @@
     }
 
     .card-body {
+        @media (max-width: 767px) {
+            padding-inline: 1rem;
+        }
+
         label {
             color: rgba(#474747, 0.5);
         }
@@ -109,18 +113,18 @@
             gap: 1.5rem;
 
             @media (max-width: 991px) {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr !important;
                 gap: 1.5rem 0;
+            }
+
+            @for $i from 2 through 5 {
+                &.grid-#{$i} {
+                    grid-template-columns: repeat($i, 1fr);
+                }
             }
 
             label {
                 margin-bottom: 0.5rem;
-            }
-
-            .form-control {
-                &::placeholder {
-                    text-align: end;
-                }
             }
         }
     }

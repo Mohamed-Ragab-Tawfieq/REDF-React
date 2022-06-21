@@ -28,9 +28,24 @@ ul {
 }
 
 .btn,
-input {
+.form-control {
     &:focus {
         box-shadow: none !important;
+    }
+}
+
+.form-control {
+    &:disabled {
+        color: rgba(71, 71, 71, 0.55);
+    }
+
+    &:focus {
+        border: 1p;
+    }
+
+    &::placeholder {
+        text-align: end;
+        color: rgba(#474747, 0.3);
     }
 }
 

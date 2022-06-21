@@ -108,23 +108,23 @@ function BranchesSettings() {
 
                             <div className="input-item">
                                 <label>عدد الموظفين المعنيين بخدمة المواعيد المسبقة</label>
-                                <input type="text" className='form-control' placeholder="موظف" value={24} readOnly />
+                                <input type="text" className='form-control' placeholder="موظف" value={24} disabled />
                             </div>
                             <div className="input-item">
                                 <label>عدد العملاء المسموح لهم بحجز موعد في الفترة الواحدة</label>
-                                <input type="text" className='form-control' placeholder="موظف" value={1} readOnly />
+                                <input type="text" className='form-control' placeholder="موظف" value={1} disabled />
                             </div>
                             <div className="input-item">
                                 <label>المدة الزمنية لتقديم الخدمة للعميل</label>
-                                <input type="text" className='form-control' placeholder="موظف" value={15} readOnly />
+                                <input type="text" className='form-control' placeholder="موظف" value={15} disabled />
                             </div>
                             <div className="input-item">
                                 <label>الوقت المسموح لتلقي الخدمة بعد حلول وقت الموعد</label>
-                                <input type="text" className='form-control' placeholder="موظف" value={1} readOnly />
+                                <input type="text" className='form-control' placeholder="موظف" value={1} disabled />
                             </div>
                             <div className="input-item">
                                 <label>عدد المواعيد المسموح للعميل بحجزها (في نفس اليوم)</label>
-                                <input type="text" className='form-control' placeholder="موظف" value={1} readOnly />
+                                <input type="text" className='form-control' placeholder="موظف" value={1} disabled />
                             </div>
                         </div>
 

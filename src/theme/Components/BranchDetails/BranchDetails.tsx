@@ -5,35 +5,50 @@ function BranchDetails() {
         <>
             <div className="card style-2">
                 <div className="card-header">
-                    <h5>خدمات الفرع</h5>
-                    <button className='btn'>تفعيل الكل</button>
-                    <button className='btn'>إلغاء تفعيل الكل</button>
+                    <h5>موقع الفرع</h5>
                 </div>
 
-                <div className="card-body">
+                <div className="card-body grid-2">
                     <div className="item">
-                        <label>الوقت المسموح لتلقي الخدمة بعد حلول وقت الموعد</label>
-                        <input type="number" className='form-control' placeholder='ساعة' />
+                        <label>العنوان من خرائط جوجل</label>
+                        <div className="input-group">
+                            <input type="text" className="form-control" placeholder="العنوان من خرائط جوجل" value="25 شارع المادن, اسم شارع, اسم مكان, المدينة المنورة" disabled />
+                            <span className="input-group-text">تحديد الموقع علي الخريطة</span>
+                        </div>
+                        <input type="text" className='form-control' placeholder='موظف' value="25 شارع المادن, اسم شارع, اسم مكان, المدينة المنورة" disabled />
+                    </div>
+                    <div className="item">
+                        <label>العنوان لفظياً</label>
+                        <input type="text" className='form-control' placeholder='عميل' value="اسم شارع, اسم مكان, المدينة المنورة" />
+                    </div>
+                </div>
+            </div>
+
+            <div className="card style-2">
+                <div className="card-header">
+                    <h5>إعدادات أخري</h5>
+                </div>
+
+                <div className="card-body grid-3">
+                    <div className="item">
+                        <label>عدد الموظفين المعنيين بخدمة المواعيد المسبقة</label>
+                        <input type="number" className='form-control' placeholder='موظف' value={15} disabled />
                     </div>
                     <div className="item">
                         <label>عدد العملاء المسموح لهم بحجز موعد في الفترة الواحدة</label>
-                        <input type="number" className='form-control' placeholder='ساعة' />
-                    </div>
-                    <div className="item">
-                        <label>عدد المواعيد المسموح للعميل بحجزها (في نفس اليوم)</label>
-                        <input type="number" className='form-control' placeholder='ساعة' />
+                        <input type="number" className='form-control' placeholder='عميل' value={15} disabled />
                     </div>
                     <div className="item">
                         <label>المدة الزمنية لتقديم الخدمة للعميل</label>
-                        <input type="number" className='form-control' placeholder='ساعة' />
+                        <input type="number" className='form-control' placeholder='دقيقة' value={15} disabled />
                     </div>
                     <div className="item">
-                        <label>الفترة المسموح بها للعميل الإلغاء/ التعديل علي موعد </label>
-                        <input type="number" className='form-control' placeholder='ساعة' />
+                        <label>الوقت المسموح لتلقي الخدمة بعد حلول وقت الموعد</label>
+                        <input type="number" className='form-control' placeholder='ساعة' value={15} disabled />
                     </div>
                     <div className="item">
-                        <label>الفترة المستقبلية المسموح بها لحجز موعد</label>
-                        <input type="number" className='form-control' placeholder='ساعة' />
+                        <label>عدد المواعيد المسموح للعميل بحجزها (في نفس اليوم)</label>
+                        <input type="number" className='form-control' placeholder='موعد' value={15} disabled />
                     </div>
                 </div>
             </div>

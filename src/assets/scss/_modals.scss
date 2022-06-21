@@ -209,9 +209,6 @@
 
                     label {
                         color: rgba(#474747, 0.5);
-                    }
-
-                    label {
                         margin-bottom: 0.5rem;
                     }
 
@@ -219,13 +216,10 @@
                         color: rgba(#474747, 0.55);
                         font-weight: bold;
 
-                        // &:disabled {
                         &::placeholder {
-                            text-align: end;
                             opacity: 1 !important;
                             color: red !important;
                         }
-                        // }
                     }
                 }
             }
