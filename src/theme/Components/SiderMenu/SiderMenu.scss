@@ -178,93 +178,6 @@
                         }
                     }
                 }
-
-                .sub-list {
-                    position: absolute;
-                    width: 195px;
-                    inset-inline-start: 5rem;
-                    margin-top: 2.5rem;
-                    z-index: 15;
-
-                    .title {
-                        color: rgba(#444, 0.5);
-                        margin: 0.9rem 1.4rem;
-                    }
-
-                    .item {
-                        position: relative;
-
-                        padding: 1rem;
-                        padding-inline-start: 2rem;
-
-                        width: 100%;
-                        border-radius: 0.5rem;
-
-                        &::before {
-                            content: url(../../../assets/images/icons/bookmark.svg);
-                            position: absolute;
-                            inset-inline-start: 6px;
-                            bottom: 50%;
-                            transform: translateY(50%);
-                        }
-
-                        a {
-                            color: #444;
-                        }
-
-                        & + .item {
-                            margin-top: 0.5rem;
-                        }
-
-                        &.active {
-                            background-color: rgba(#dbf0f0, 0.5);
-                            color: #129c9a;
-
-                            &::before {
-                                content: url(../../../assets/images/icons/bookmark-muted.svg);
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        .toggle {
-            position: absolute;
-            top: -22px;
-            inset-inline-end: 12px;
-            z-index: 15;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            width: 2.75rem;
-            height: 2.75rem;
-
-            background-color: $orange;
-            border-radius: 50%;
-            border: 3px solid #fff;
-
-            @media (max-width: 767px) {
-                position: fixed;
-                top: auto !important;
-                bottom: 0;
-                inset-inline-start: 50% !important;
-                transform: translateX(50%);
-
-                width: 100%;
-                border-radius: 0;
-                border: none;
-            }
-
-            img {
-                transform: scale(1) !important;
-                transition: all 0.3s ease-in-out;
-
-                @media (max-width: 767px) {
-                    width: 1.5rem;
-                }
             }
         }
 
@@ -305,6 +218,48 @@
                 background-size: cover;
             }
 
+            .title {
+                color: rgba(#444, 0.5);
+                margin: 0.9rem 1.4rem;
+            }
+
+            .list {
+                .item {
+                    position: relative;
+
+                    padding: 1rem;
+                    padding-inline-start: 2rem;
+
+                    width: 100%;
+                    border-radius: 0.5rem;
+
+                    &::before {
+                        content: url(../../../assets/images/icons/bookmark.svg);
+                        position: absolute;
+                        inset-inline-start: 6px;
+                        bottom: 50%;
+                        transform: translateY(50%);
+                    }
+
+                    a {
+                        color: #444;
+                    }
+
+                    & + .item {
+                        margin-top: 0.5rem;
+                    }
+
+                    &.active {
+                        background-color: rgba(#dbf0f0, 0.5);
+                        color: #129c9a;
+
+                        &::before {
+                            content: url(../../../assets/images/icons/bookmark-muted.svg);
+                        }
+                    }
+                }
+            }
+
             .username {
                 margin-top: auto;
                 padding: 0 1rem 2rem;
@@ -312,6 +267,45 @@
                 label {
                     font-weight: bold;
                     display: block;
+                }
+            }
+        }
+
+        .toggle {
+            position: absolute;
+            top: -22px;
+            inset-inline-end: 12px;
+            z-index: 20;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 2.75rem;
+            height: 2.75rem;
+
+            background-color: $orange;
+            border-radius: 50%;
+            border: 3px solid #fff;
+
+            @media (max-width: 767px) {
+                position: fixed;
+                top: auto !important;
+                bottom: 0;
+                inset-inline-start: 50% !important;
+                transform: translateX(50%);
+
+                width: 100%;
+                border-radius: 0;
+                border: none;
+            }
+
+            img {
+                transform: scale(1) !important;
+                transition: all 0.3s ease-in-out;
+
+                @media (max-width: 767px) {
+                    width: 1.5rem;
                 }
             }
         }
@@ -358,8 +352,7 @@
                     }
                 }
 
-                .sub-menu,
-                .sub-list {
+                .sub-menu {
                     width: 0;
                     opacity: 0;
                     border: none;

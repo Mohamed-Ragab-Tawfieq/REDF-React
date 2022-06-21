@@ -42,13 +42,6 @@ function SiderMenu() {
                             <img src={HomeIcon} alt="" />
                             <span className='tooltip-text'>HomeIcon</span>
                         </NavLink>
-
-
-                        <ul className="sub-list">
-                            <li> <h6 className='title'>المواعيد</h6> </li>
-                            <li className='item'><Link to="/">طلبات الفروع لإلغاء المواعيد</Link></li>
-                            <li className='item active'><Link to="/">طلبات حجز مواعيد بالفروع</Link></li>
-                        </ul>
                     </li>
                     <li>
                         <NavLink to="/">
@@ -95,6 +88,13 @@ function SiderMenu() {
                 </ul>
 
                 <div className='sub-menu'>
+                    <h6 className='title'>المواعيد</h6>
+
+                    <ul className="list">
+                        <li className='item'><NavLink to="/">طلبات الفروع لإلغاء المواعيد</NavLink></li>
+                        <li className='item active'><NavLink to="/">طلبات حجز مواعيد بالفروع</NavLink></li>
+                    </ul>
+
                     <div className="username">
                         <label>أحمد سمير</label>
                         <small>ahmedsamer062@gmail.com</small>
