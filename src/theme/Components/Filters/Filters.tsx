@@ -6,7 +6,7 @@ function Filters() {
         <div className="filters">
             <div className="filter search">
                 <label>ابحث عن كود الموعد, اسم الخدمة أو اسم الفرع</label>
-                <div className="input-group">
+                <div className="input-group icon-start">
                     <input type="text" className="form-control" placeholder="ابحث" />
                     <span className="input-group-text"><img src={searchIcon} alt="" /></span>
                 </div>

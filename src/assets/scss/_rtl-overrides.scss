@@ -2,4 +2,23 @@ html[dir="rtl"] {
     .form-select {
         background-position: 2% 50%;
     }
+
+    .side-menu {
+        .menu-wrap {
+            .toggle {
+                img {
+                    transform: scale(1);
+                }
+            }
+        }
+        &.toggled {
+            .menu-wrap {
+                .toggle {
+                    img {
+                        transform: scale(-1);
+                    }
+                }
+            }
+        }
+    }
 }

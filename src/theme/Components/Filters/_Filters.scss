@@ -38,36 +38,6 @@
             margin-inline-end: 0.5rem;
         }
 
-        .input-group {
-            display: flex;
-
-            .form-control {
-                order: 2;
-
-                border-inline-start: none !important;
-                border-start-start-radius: 0 !important;
-                border-end-start-radius: 0 !important;
-                border-start-end-radius: 0.5rem !important;
-                border-end-end-radius: 0.5rem !important;
-
-                &:focus {
-                    & + .input-group-text {
-                        border: 1px solid #86b7fe;
-                    }
-                }
-            }
-
-            .input-group-text {
-                order: 1;
-
-                border-inline-end: none !important;
-                border-start-start-radius: 0.5rem !important;
-                border-end-start-radius: 0.5rem !important;
-                border-start-end-radius: 0 !important;
-                border-end-end-radius: 0 !important;
-            }
-        }
-
         select {
             background-image: url(../../../assets/images/icons/chevron-down.svg);
             padding-inline-start: 0.75rem;

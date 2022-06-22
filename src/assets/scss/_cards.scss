@@ -54,6 +54,24 @@
                 background: rgba(42, 166, 164, 0.2);
             }
         }
+
+        .active-all {
+            .btn {
+                background-color: transparent;
+                border: none;
+
+                &:first-of-type {
+                    color: $orange;
+                    border-inline-end: 1px solid rgba(#000, 0.2);
+                    border-start-end-radius: 0;
+                    border-end-end-radius: 0;
+                }
+
+                &:last-of-type {
+                    color: #6c6c6c;
+                }
+            }
+        }
     }
 
     .card-body {
@@ -98,6 +116,19 @@
                     }
                 }
             }
+        }
+
+        .switch-item {
+            display: flex;
+            justify-content: space-between;
+
+            background: rgba(42, 166, 164, 0.1);
+            color: #2aa6a4;
+
+            border: 1px solid rgba(42, 166, 164, 0.3);
+            border-radius: 0.5rem;
+
+            padding: 0.5rem;
         }
     }
 

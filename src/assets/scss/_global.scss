@@ -10,10 +10,10 @@ body {
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none !important;
 
     &:hover {
-        text-decoration: none;
+        text-decoration: none !important;
     }
 
     &:focus {
@@ -34,6 +34,13 @@ ul {
     }
 }
 
+.btn {
+    &.btn-grad {
+        color: #fff;
+        background: linear-gradient(263deg, #25a4a2 8%, #47b2b1 66%);
+    }
+}
+
 .form-control {
     &:disabled {
         color: rgba(71, 71, 71, 0.55);
@@ -49,10 +56,59 @@ ul {
     }
 }
 
-.btn {
-    &.btn-grad {
-        color: #fff;
-        background: linear-gradient(263deg, #25a4a2 8%, #47b2b1 66%);
+.input-group {
+    display: flex;
+
+    &.icon-start {
+        .form-control {
+            order: 2;
+
+            border-inline-start: none !important;
+            border-start-start-radius: 0 !important;
+            border-end-start-radius: 0 !important;
+            border-start-end-radius: 0.5rem !important;
+            border-end-end-radius: 0.5rem !important;
+
+            &:focus {
+                & + .input-group-text {
+                    border: 1px solid #86b7fe;
+                }
+            }
+        }
+
+        .input-group-text {
+            order: 1;
+
+            border-inline-end: none !important;
+            border-start-start-radius: 0.5rem !important;
+            border-end-start-radius: 0.5rem !important;
+            border-start-end-radius: 0 !important;
+            border-end-end-radius: 0 !important;
+        }
+    }
+
+    &.icon-end {
+        .form-control {
+            border-inline-end: none !important;
+            border-start-end-radius: 0 !important;
+            border-end-end-radius: 0 !important;
+            border-start-start-radius: 0.5rem !important;
+            border-end-start-radius: 0.5rem !important;
+
+            &:focus {
+                & + .input-group-text {
+                    border: 1px solid #86b7fe;
+                }
+            }
+        }
+
+        .input-group-text {
+            border-inline-start: none !important;
+            border-start-end-radius: 0.5rem !important;
+            border-end-end-radius: 0.5rem !important;
+            border-start-start-radius: 0 !important;
+            border-end-start-radius: 0 !important;
+        }
     }
 }
 
@@ -106,17 +162,22 @@ ul {
         margin-bottom: 0;
 
         .breadcrumb-item {
-            a {
-                color: rgba(#fff, 0.7);
+            &.active {
+                color: #fff;
             }
 
             & + .breadcrumb-item {
                 &::before {
-                    content: url(../images/icons/divide.svg);
+                    content: "\276F \276F";
                     float: none;
                     text-align: start;
                     padding-inline-end: 10px;
+                    color: #fff;
                 }
+            }
+
+            a {
+                color: rgba(#fff, 0.7);
             }
         }
     }

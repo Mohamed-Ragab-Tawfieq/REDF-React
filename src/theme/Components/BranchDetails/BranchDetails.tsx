@@ -5,26 +5,129 @@ function BranchDetails() {
         <>
             <div className="card style-2">
                 <div className="card-header">
+                    <h5>خدمات الفرع</h5>
+                    <div className="active-all">
+                        <button className='btn'>تفعيل الكل</button>
+                        <button className='btn'>إلغاء تفعيل الكل</button>
+                    </div>
+                </div>
+
+                <div className="card-body grid-5">
+                    <div className="switch-item">
+                        <span>خدمة تحديث صك</span>
+                        <div className="switch-wrap">
+                            <input type="checkbox" className='switch-btn' />
+                            <label className="switch-label"></label>
+                        </div>
+                    </div>
+                    <div className="switch-item">
+                        <span>خدمة تحديث صك</span>
+                        <div className="switch-wrap">
+                            <input type="checkbox" className='switch-btn' />
+                            <label className="switch-label"></label>
+                        </div>
+                    </div>
+                    <div className="switch-item">
+                        <span>خدمة تحديث صك</span>
+                        <div className="switch-wrap">
+                            <input type="checkbox" className='switch-btn' />
+                            <label className="switch-label"></label>
+                        </div>
+                    </div>
+                    <div className="switch-item">
+                        <span>خدمة تحديث صك</span>
+                        <div className="switch-wrap">
+                            <input type="checkbox" className='switch-btn' />
+                            <label className="switch-label"></label>
+                        </div>
+                    </div>
+                    <div className="switch-item">
+                        <span>خدمة تحديث صك</span>
+                        <div className="switch-wrap">
+                            <input type="checkbox" className='switch-btn' />
+                            <label className="switch-label"></label>
+                        </div>
+                    </div>
+                    <div className="switch-item">
+                        <span>خدمة تحديث صك</span>
+                        <div className="switch-wrap">
+                            <input type="checkbox" className='switch-btn' />
+                            <label className="switch-label"></label>
+                        </div>
+                    </div>
+                    <div className="switch-item">
+                        <span>خدمة تحديث صك</span>
+                        <div className="switch-wrap">
+                            <input type="checkbox" className='switch-btn' />
+                            <label className="switch-label"></label>
+                        </div>
+                    </div>
+                    <div className="switch-item">
+                        <span>خدمة تحديث صك</span>
+                        <div className="switch-wrap">
+                            <input type="checkbox" className='switch-btn' />
+                            <label className="switch-label"></label>
+                        </div>
+                    </div>
+                    <div className="switch-item">
+                        <span>خدمة تحديث صك</span>
+                        <div className="switch-wrap">
+                            <input type="checkbox" className='switch-btn' />
+                            <label className="switch-label"></label>
+                        </div>
+                    </div>
+                    <div className="switch-item">
+                        <span>خدمة تحديث صك</span>
+                        <div className="switch-wrap">
+                            <input type="checkbox" className='switch-btn' />
+                            <label className="switch-label"></label>
+                        </div>
+                    </div>
+                    <div className="switch-item">
+                        <span>خدمة تحديث صك</span>
+                        <div className="switch-wrap">
+                            <input type="checkbox" className='switch-btn' />
+                            <label className="switch-label"></label>
+                        </div>
+                    </div>
+                    <div className="switch-item">
+                        <span>خدمة تحديث صك</span>
+                        <div className="switch-wrap">
+                            <input type="checkbox" className='switch-btn' />
+                            <label className="switch-label"></label>
+                        </div>
+                    </div>
+                    <div className="switch-item">
+                        <span>خدمة تحديث صك</span>
+                        <div className="switch-wrap">
+                            <input type="checkbox" className='switch-btn' />
+                            <label className="switch-label"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="card style-2">
+                <div className="card-header">
                     <h5>موقع الفرع</h5>
                 </div>
 
                 <div className="card-body grid-2">
                     <div className="item">
                         <label>العنوان من خرائط جوجل</label>
-                        <div className="input-group">
+                        <div className="input-group icon-end">
                             <input type="text" className="form-control" placeholder="العنوان من خرائط جوجل" value="25 شارع المادن, اسم شارع, اسم مكان, المدينة المنورة" disabled />
-                            <span className="input-group-text">تحديد الموقع علي الخريطة</span>
+                            <button type='button' className="btn btn-warning input-group-text">تحديد الموقع علي الخريطة</button>
                         </div>
-                        <input type="text" className='form-control' placeholder='موظف' value="25 شارع المادن, اسم شارع, اسم مكان, المدينة المنورة" disabled />
                     </div>
                     <div className="item">
                         <label>العنوان لفظياً</label>
-                        <input type="text" className='form-control' placeholder='عميل' value="اسم شارع, اسم مكان, المدينة المنورة" />
+                        <input type="text" className='form-control' placeholder='موظف' value="25 شارع المادن, اسم شارع, اسم مكان, المدينة المنورة" />
                     </div>
                 </div>
             </div>
 
-            <div className="card style-2">
+            <div className="card style-2 mt-4">
                 <div className="card-header">
                     <h5>إعدادات أخري</h5>
                 </div>
