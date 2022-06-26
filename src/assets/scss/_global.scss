@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700&display=swap");
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -7,6 +9,8 @@
 body {
     overflow-x: hidden;
     background: #f9fbfc;
+    font-family: "Cairo", sans-seif;
+    text-align: start;
 }
 
 a {
@@ -53,6 +57,23 @@ ul {
     &::placeholder {
         text-align: end;
         color: rgba(#474747, 0.3);
+    }
+}
+
+.form-check {
+    .form-check-input {
+        vertical-align: middle;
+        margin-top: 0;
+        margin-left: auto;
+        margin-inline-end: 14px;
+        float: none;
+
+        &:checked {
+            background-image: none;
+            background: #28b7b3;
+            outline: 1px solid #28b7b3;
+            border: 2px solid #fff;
+        }
     }
 }
 
@@ -116,6 +137,10 @@ ul {
     background-position: 95% 50%;
     border-radius: 0.5rem;
     padding-inline-start: 0.75rem;
+}
+
+.dropdown-item {
+    text-align: start;
 }
 
 .caret {
