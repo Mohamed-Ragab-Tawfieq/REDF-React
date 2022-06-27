@@ -51,10 +51,27 @@ function Header() {
                             <img src={notificationIcon} alt="" />
                         </button>
 
-                        <ul className="dropdown-menu" aria-labelledby="notificationsDrodownBtn">
-                            <li><a className="dropdown-item" href="#">Action</a></li>
-                            <li><a className="dropdown-item" href="#">Another action</a></li>
-                            <li><a className="dropdown-item" href="#">Something else here</a></li>
+                        <ul className="dropdown-menu notifications" aria-labelledby="notificationsDrodownBtn">
+                            <li className='header'>
+                                <span>الإشعارات</span>
+                                <small>7 جديد</small>
+                            </li>
+                            <li><a className="dropdown-item" href="#">
+                                <span className='title'>تم قبول الإلغاء!</span>
+                                <small className='desc'>لقد قمت بقبول إلغاء 24 موعد بفرع الـ...</small>
+                                <small className='date'>2022/7/22</small>
+                            </a></li>
+                            <li className='settings'><a className="dropdown-item" href="#">
+                                <span className='title'>تم تغيير إعدادات الفرع</span>
+                                <small className='desc'>لقد قمت بقبول إلغاء 24 موعد بفرع الـ...</small>
+                                <small className='date'>2022/7/22</small>
+                            </a></li>
+                            <li><a className="dropdown-item" href="#">
+                                <span className='title'>تم الإلغاء!</span>
+                                <small className='desc'>لقد قمت بقبول إلغاء 24 موعد بفرع الـ...</small>
+                                <small className='date'>2022/7/22</small>
+                            </a></li>
+                            <li className='footer'><a href="" className='stretched-link'>عرض كل الإشعارات</a></li>
                         </ul>
                     </div>
                 </div>
