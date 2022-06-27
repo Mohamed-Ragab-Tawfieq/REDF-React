@@ -1,7 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
 
-import printIcon from '../../../assets/images/icons/print.svg';
 import earthIcon from '../../../assets/images/icons/earth.svg'
 import notificationIcon from '../../../assets/images/icons/notification.svg'
 import logoutIcon from '../../../assets/images/icons/logout.svg'
@@ -10,21 +9,9 @@ import userIcon from '../../../assets/images/profile.png'
 function Header() {
     return (
         <header>
-            <nav aria-label="breadcrumb" className='breadcrumb-wrap'>
-                <h3 className='title'>طلبات حجز مواعيد بالفروع</h3>
+            <h3 className='page-title'>طلبات حجز مواعيد بالفروع</h3>
 
-                <ol className="breadcrumb">
-                    <li className="breadcrumb-item"><NavLink to="/">المواعيد</NavLink></li>
-                    <li className="breadcrumb-item active" aria-current="page">طلبات الحجز</li>
-                </ol>
-            </nav>
-
-            <div className="actions">
-                <button className='btn excel-btn'>تصدير كملف Excel</button>
-                <button className='btn print-btn'>طباعة <img src={printIcon} alt="" /></button>
-            </div>
-
-            <div className="notifications">
+            <div className="notifications-wrap">
                 <div className="btns-wrap btn-group">
                     <div className="btn-group">
                         <button type="button" className="btn lang-btn" id="langDrodownBtn" data-bs-toggle="dropdown" aria-expanded="false">

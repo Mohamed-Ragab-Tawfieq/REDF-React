@@ -6,10 +6,13 @@ import Pagination from '../Pagination/Pagination.tsx'
 import ReserveSettings from '../ReserveSettings/ReserveSettings.tsx'
 import BranchesSettings from '../BranchesSettings/BranchesSettings.tsx'
 import BranchDetails from '../BranchDetails/BranchDetails.tsx'
+import Breadcrumb from '../Breadcrumbs/Breadcrumb.tsx'
 
 function Content() {
     return (
         <div className="content">
+            <Breadcrumb />
+            <br />
             <Filters />
             <br />
             <BranchesSettings />

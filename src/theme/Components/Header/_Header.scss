@@ -13,50 +13,19 @@ header {
         padding: 0.5rem 1.5rem;
     }
 
-    .actions {
-        @media (max-width: 991px) {
-            margin-top: 0.5rem;
-        }
-
-        @media (max-width: 767px) {
-            display: grid;
-            grid-template-columns: 1fr;
-        }
-
-        .btn {
-            height: 2.3rem;
-            color: #fff;
-
-            @media (min-width: 768px) {
-                margin-inline-end: 0.5rem;
-            }
-
-            @media (max-width: 767px) {
-                margin: 0.3rem;
-            }
-        }
-
-        .excel-btn {
-            background-color: rgba(#fff, 0.4);
-        }
-
-        .print-btn {
-            background-color: $orange;
-
-            img {
-                margin-inline-end: 0.3rem;
-            }
-        }
+    .page-title {
+        color: #fff;
+        font-weight: 700;
     }
 
-    .notifications .btns-wrap,
+    .notifications-wrap .btns-wrap,
     .profile .btn {
         background: rgba(157, 208, 209, 0.2);
         border-radius: 10px;
         padding-block: 0.75rem;
     }
 
-    .notifications,
+    .notifications-wrap,
     .profile {
         .dropdown-menu {
             position: relative;
@@ -95,7 +64,10 @@ header {
         }
     }
 
-    .notifications {
+    .notifications-wrap {
+        margin-inline-start: auto;
+        margin-inline-end: 1rem;
+
         .btns-wrap {
             .lang-btn {
                 border-radius: 0;
@@ -109,6 +81,14 @@ header {
                 &.lang,
                 &.notifications {
                     top: 21px !important;
+                    inset-inline-start: auto !important;
+                    inset-inline-end: 0 !important;
+
+                    border: none;
+
+                    li:not(.header) {
+                        border-inline: 1px solid rgba(0, 0, 0, 0.15);
+                    }
                 }
 
                 &.lang {
@@ -156,6 +136,10 @@ header {
                             padding-block: 0.5rem;
                             text-align: center;
                             color: #25a4a2;
+
+                            border-end-start-radius: 0.5rem;
+                            border-end-end-radius: 0.5rem;
+                            border-bottom: 1px solid rgba(0, 0, 0, 0.15);
                             box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.1);
                         }
 
