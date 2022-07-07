@@ -38,7 +38,7 @@ function Header() {
                             <img src={notificationIcon} alt="" />
                         </button>
 
-                        <ul className="dropdown-menu notifications" aria-labelledby="notificationsDrodownBtn">
+                        <ul className="dropdown-menu notifications-menu" aria-labelledby="notificationsDrodownBtn">
                             <li className='header'>
                                 <span>الإشعارات</span>
                                 <small>7 جديد</small>
